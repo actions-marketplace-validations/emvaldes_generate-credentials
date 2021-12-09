@@ -242,6 +242,9 @@ runs:
             echo "${environment}=${credential}" >> ${GITHUB_ENV} ;
           fi ;
         done ;
+        echo "::add-mask::$AWS_ACCESS_KEY_ID" ;
+        echo "::add-mask::$AWS_SECRET_ACCESS_KEY" ;
+        echo "::add-mask::$AWS_SESSION_TOKEN" ;
         ####--------------------------------------------------------------------
         echo -e "\nCompleted! " ;
         ####--------------------------------------------------------------------
